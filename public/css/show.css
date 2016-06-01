@@ -1,0 +1,123 @@
+/*主要部分开始*/
+
+.change-content ,
+.change-content-other {
+    width: 887px;
+    margin: 0 auto;
+}
+.change-content p ,
+.change-content-other p {
+    width: 856px;
+    height: 50px;
+    font: 400 34px/50px "microsoft yahei";
+    color: #FF4001;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding-left: 14px;
+    padding-right: 14px;
+    background-color: white;
+
+}
+.change-content-pic {
+    width: 887px;
+    height: 520px;
+    text-align: center;
+    margin-left: 48px;
+    margin-right: 48px;
+    background-color: white;
+}
+.change-content-other {
+    width: 887px;
+    height: auto;
+    text-align: center;
+    margin-left: 48px;
+    margin-right: 48px;
+    background-color: white;
+}
+.cake {
+    width: 276px;
+    height: auto;
+    margin: 20px 6px  ;
+    float: left;
+    text-align: center;
+
+}
+.other {
+    width: 208px;
+    height: auto;
+    margin-left: 10px;
+    float: left;
+    text-align: center;
+}
+.cake li
+.other li {
+    text-align: center;
+}
+
+.price {
+    width: 95px;
+    height: auto;
+    color: #FF4001;
+}
+.pounds {
+    font: 300 12px/20px "microsoft yahei" ;
+}
+.cake img ,
+.other img {
+    width: 100%;
+    height: auto;
+    float: left;
+}
+
+.change-content-pic .cakename {
+    text-align: left;
+}
+.change-content-other .cakename{
+    text-align: center;
+}
+
+.english {
+    font-size: 11px;
+}
+.change-content-pic .cakeinfo {
+    float: left;
+    height: 20px;
+    line-height: 20px;
+    width: 276px;
+    font-size: 12px;
+    text-align: left;
+}
+.change-content-other  .cakeinfo {
+    height: 20px;
+    line-height: 20px;
+    width: 100%;
+    font-size: 12px;
+    text-align: center;
+}
+.change-content-pic .chakan  img {
+    width: 106px;
+    height: 24px;
+    margin-left: 85px;
+    margin-right: 85px;
+    padding-top: 12px;
+}
+.change-content-other .chakan  img {
+    width: 106px;
+    height: 24px;
+    margin-left: 51px;
+    margin-right: 51px;
+    padding-top: 12px;
+}
+.change-content-other {
+    height: 300px;
+}
+
+.change-content-more {
+    padding: 40px 0;
+    text-align: center;
+
+
+}
+
+
+/*主要部分结束*/

@@ -1,0 +1,131 @@
+/*购物导航栏开始*/
+.site-order-banner {
+    height: 100px;
+}
+.banner-order-l {
+    float: left;
+    font: 400 24px/100px "microsoft yahei";
+
+}
+.banner-order-r {
+    float: right;
+    font: 200 16px/100px "microsoft yahei";
+}
+.banner-order-r > a {
+    color: black;
+    font: 400 16px/100px "microsoft yahei";
+
+}
+/*购物导航栏结束*/
+
+
+
+
+
+
+/*购物车部分开始*/
+.order-seri {
+    height: 50px;
+    font: 400 22px/50px "microsoft yahei";
+}
+.order-main {
+    /*width: 100%;*/
+    height: 50px;
+    font: 400 16px/50px "microsoft yahei";
+    background-color: #F1F1F1;
+    padding-left: 20px;
+    /*text-align: center;*/
+}
+.order-main-input ,
+.order-con-input {
+    width: 200px;
+    float: left;
+}
+.order-main-l ,
+.order-con-l{
+    width: 200px;
+    float: left;
+}
+.order-main-r ,
+.order-con-r {
+    width: 500px;
+    float: right;
+
+}
+.order-main-r ul li,
+.order-con-r ul li {
+    width: 125px;
+    float: left;
+
+}
+
+.order-main-tit {
+    height: 50px;
+    padding: 0 20px;
+    color: #ffffff;
+
+}
+.order-main-tit > input ,
+{
+    margin-right: 15px;
+}
+
+.order-con-tit > input {
+    margin-left:  20px;
+    float: left;
+    /*padding: 5px 10px;*/
+
+}
+.order-main-tit > span {
+    background-color: #E3393B;
+    border-radius: 5px;
+    border: 1px solid #E3393B;
+    font: 400 18px/50px "microsoft yahei";
+    padding: 5px 10px;
+}
+.order-con{
+    position: relative;
+    border-top: 1px solid #ccc;
+    padding: 10px 0;
+    height: 90px;
+}
+.order-con-tit > img{
+    height: 80px;
+    width: 80px;
+    float: left;
+}
+
+
+
+.option_box{
+
+}
+.option_box > span{
+    border: 1px solid #ccc;
+    width: 32px;
+    height: 24px;
+    text-align: center;
+    line-height: 24px;
+    float: left;
+}
+.option_box > span:first-of-type{
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+.option_box > span:last-of-type{
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+.option_box > input{
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    width: 32px;
+    height: 24px;
+    text-align: center;
+    line-height: 24px;
+    float: left;
+}
+
+
+/*购物车部分结束*/
+

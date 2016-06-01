@@ -1,0 +1,201 @@
+
+/*登录头部开始*/
+.login-banner >a {
+    width: 200px;
+    height: 80px;
+    display: block;
+    float: left;
+}
+.login-banner >span {
+    font: 400 30px/80px "microsoft yahei";
+    height: 80px;
+
+}
+/*登录头部结束*/
+
+/*登录主体开始*/
+.login-content {
+    background-color: #E93854;
+}
+.login-content-main {
+    width: 100%;
+    height: 500px;
+    background: url("../images/back1.png") no-repeat;
+    background-color: #E93854;
+}
+.login-fr-box {
+    margin: 16px;
+    position: relative;
+}
+.login-content-fr ,
+.login-content-fr2 {
+    width: 400px;
+    height: 410px;
+    margin-top: 40px;
+    float: right;
+    background-color: #fff;
+    position: relative;
+}
+
+.login-member {
+    height: 36px;
+}
+.login-member > h3 {
+    font: 400 26px/28px "microsoft yahei";
+    float: left;
+}
+.login-member >a {
+    height: 28px;
+    float: right;
+    font: 300 14px/28px "microsoft yahei";
+    float: right;
+    color: red;
+    position: relative;
+}
+.reg-icon {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    line-height: 28px;
+    top: 6px;
+    left: -20px;
+    background: url("../images/pwd-icons-new.png") no-repeat -104px -75px;
+
+}
+.login-tips {
+    position: relative;
+    width: 366px;
+    height: 24px;
+    border: 1px solid #FFE57D;
+    font:400 14px/24px "microsoft yahei";
+    margin: 10px 0;
+}
+.reg-icon2 {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 12px;
+    height: 16px;
+    background: url("../images/pwd-icons-new.png") no-repeat -104px -23px;
+    margin: 4px 0 0 10px;
+}
+.login-tips > span {
+    margin-left: 42px;
+}
+.login-account {
+    width: 366px;
+    height: 130px;
+    position: relative;
+}
+.login-account > s {
+    position: absolute;
+    width: 38px;
+    height: 38px;
+    border: 1px solid #BDBDBD;
+    margin: 12px 0 ;
+    background: url("../images/pwd-icons-new.png") no-repeat 0 0;
+}
+.login-account > .s1 {
+    margin: 12px 0 ;
+    background: url("../images/pwd-icons-new.png") no-repeat -48px 0;
+}
+.login-account > input {
+    width: 316px;
+    height: 38px;
+    font: 400 12px/38px "microsoft yahei";
+    border: 1px solid #BDBDBD;
+    margin: 12px 0 ;
+    padding-left: 50px;
+}
+
+.forgetpassword {
+    height: 30px;
+    font: 400 14px/30px "microsoft yahei";
+
+}
+.forgetpassword > input {
+    margin: 0 10px;
+}
+.forgetpassword a {
+    float: right;
+    font: 400 14px/30px "microsoft yahei";
+}
+
+.login-fr-box > .btn {
+    width: 100%;
+    height: 34px;
+    cursor: pointer;
+    font: 400 20px/34px "microsoft yahei";
+    color: #fff;
+    background-color: #E4393C;
+    border: 1px solid #E85356;
+    margin: 16px 0;
+    letter-spacing: 22px;
+}
+.login-partner {
+    margin: 0 0 20px 16px;
+}
+.login-partner p  {
+    margin: 6px 0;
+    font:400 14px/26px "microsoft yahei";
+    color: #999;
+}
+.login-partner a {
+    margin: 0 13px 0 11px;
+    font-size: 13px;
+    color: #666;
+}
+.two-dimensional-code2,
+.two-dimensional-code{
+    position: absolute;
+    right: 0;
+    bottom:0;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    background: url("../images/login-qricon-01.png") no-repeat -60px 0;
+}
+.two-dimensional-code2{
+    background: url("../images/login-qricon-01.png") no-repeat 0 -60px;
+}
+/*第二个界面*/
+.login-content-fr2 {
+    display: none;
+}
+.login-content-fr2 > span
+{
+    float: right;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    text-align: center;
+    background-color: #ccc;
+    font:400 18px/18px "微软雅黑";
+
+}
+
+
+.login-fr-box2 > h2 {
+    padding-top: 35px;
+    font:400 15px/55px "微软雅黑";
+    text-align: center;
+}
+.login-fr-box2 img  {
+    padding: 10px;
+    border: 1px solid #F4F4F4;
+    margin: 0 auto;
+    display: block;
+}
+.login-parter2 {
+    margin: 33px 90px;
+    height: 20px;
+}
+.login-parter2 a {
+    margin:  12px 25px;
+}
+
+
+/*登录主体结束*/
+
+
+

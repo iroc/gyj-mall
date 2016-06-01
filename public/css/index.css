@@ -1,0 +1,196 @@
+/*轮播图开始*/
+.main-slider {
+    width: 928px;
+    height: 440px;
+    padding: 7px;
+    border: 1px solid #ccc;
+    margin: 10px auto;
+    position: relative;
+    margin-left: 358px;
+}
+
+.screen {
+    width: 928px;
+    height: 440px;
+    overflow: hidden;
+    position: relative;
+}
+
+.screen li {
+    width: 928px;
+    height: 440px;
+    overflow: hidden;
+    float: left;
+}
+
+.screen ul {
+    position: absolute;
+    left: 0;
+    top: 0px;
+    width: 8000px;
+}
+
+.main-slider ol {
+    position: absolute;
+    left: 50%;
+    bottom: 15px;
+    line-height: 20px;
+    text-align: center;
+    margin-left: -66px;
+}
+
+.main-slider ol li {
+    float: left;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border: 1px solid #ccc;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    text-align: center;
+    margin: 0 2px;
+}
+
+.main-slider ol li.current {
+    background: #C81623;
+}
+
+#arr {
+    display: none;
+}
+
+#arr span {
+    width: 40px;
+    height: 80px;
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    margin-top: -30px;
+    background: #000;
+    cursor: pointer;
+    line-height: 80px;
+    text-align: center;
+    font-weight: bold;
+    font-family: '黑体';
+    font-size: 40px;
+    color: #fff;
+    opacity: 0.3;
+    border: 1px solid #fff;
+}
+
+#arr #right {
+    right: 5px;
+    left: auto;
+}
+
+
+/*轮播图结束*/
+
+
+
+
+/*lunbotu开始*/
+
+
+
+/*lunbotu结束*/
+
+/*today部分start*/
+.today {
+    margin-bottom: 10px;
+}
+.today-l {
+    float: left;
+    width: 210px;
+}
+.today-r {
+    float: left;
+    width: 1000px;
+    height: 240px;
+    overflow: hidden;
+    position: relative;
+}
+.today-r ul {
+    width: 500%;
+
+}
+.today-r li {
+    float: left;
+    margin-right: 1px;
+    padding-left: 30px;
+}
+
+/*today部分end*/
+
+
+
+.footer-top {
+    margin-bottom: 20px;
+}
+.footer-top-slgan {
+    width: 100%;
+    height: 94px;
+    background-color: #F5F5F5;
+    position: relative;
+    margin-bottom: 15px;
+    /*padding-top: 20px;*/
+}
+.footer-slogan {
+    position: absolute;
+    left: 50%;
+    top: 20px;
+    width: 302px;
+}
+.footer-slogan1 {
+    margin-left: -604px;       /*让这个盒子想左移动*/
+}
+.footer-slogan2 {
+    margin-left: -302px;       /*让这个盒子想左移动*/
+}
+.footer-slogan4 {
+    margin-left: 302px;        /*给这个盒子一个外边距*/
+}
+.footer-shopping dl {
+    float: left;
+    width: 200px;
+}
+.footer-shopping .last-dl {
+    width: 100px;
+}
+.footer-shopping dt,
+.footer-coverage h1 {
+    height: 35px;
+    font: 400 16px/35px "microsoft yahei";
+}
+.footer-shopping dd {
+    line-height: 20px;
+}
+.footer-coverage {
+    width: 188px;
+    height: 170px;
+    float: right;
+    background: url(../images/china.png) no-repeat left bottom;
+    margin-right: 38px;
+    padding-left: 12px;
+}
+.footer-coverage-content {
+    margin-top: 6px;
+}
+.footer-coverage a {
+    float: right;
+}
+/*lunbotu开始*/
+
+
+
+/*lunbotu结束*/
+
+
+
+
+/*lunbotu开始*/
+
+
+
+/*lunbotu结束*/

@@ -1,0 +1,289 @@
+@charset "UTF-8";
+/*css 初始化 */
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img {
+    margin: 0;
+    padding: 0;
+}
+
+fieldset, img, input, button { 			/*fieldset组合表单中的相关元素*/
+    border: none;
+    padding: 0;
+    margin: 0;
+    outline-style: none;
+}
+
+ul, ol {
+    list-style: none;				/*清除列表风格*/
+}
+
+input {
+    padding-top: 0;
+    padding-bottom: 0;
+    font-family: "SimSun", "宋体";
+}
+
+select, input {
+    vertical-align: middle;
+}
+
+select, input, textarea {
+    font-size: 12px;
+    margin: 0;
+}
+
+textarea {
+    resize: none;
+}
+
+/*防止多行文本框拖动*/
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+/*  去掉图片低测默认的3像素空白缝隙*/
+table {
+    border-collapse: collapse;			/*合并外边线*/
+}
+
+
+body {
+    font: 12px/150% Arial, Verdana, "\5b8b\4f53";	/*宋体，Unicode，统一码*/
+    color: #666;
+    background: #fff
+}
+
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1; /*IE/7/6*/
+}
+
+a {
+    color: #666;
+    text-decoration: none;
+}
+.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+a:hover {
+    color: #C81623;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 100%;
+}
+
+s, i, em {
+    font-style: normal;
+    text-decoration: none;
+}
+
+.col-red {
+    color: #C81623 !important;
+}
+
+/*公共类*/
+.w {
+    /*版心 提取 */
+    width: 1210px;
+    margin: 0 auto;
+}
+
+.fl {
+    float: left
+}
+
+.fr {
+    float: right
+}
+.hide {
+    display: none;
+}
+
+
+/*site-nav部分开始*/
+
+.site-nav {
+    height: 30px;
+    line-height: 30px;
+    background-color: #F1F1F1;
+}
+
+.site-nav-r ul li {
+    float: left;
+    padding: 0 20px;
+}
+.site-nav-r .line {
+    width: 2px;
+    height: 16px;
+    background-color: #DDDDDD;
+    padding: 0;
+    margin-top: 8px;
+}
+/*site-nav部分结束*/
+
+
+
+
+/*topbanner部分start*/
+.topbanner {
+    height: 80px;
+    background-color: #ABC380;
+}
+.tp {
+    position: relative;
+}
+.close-ban {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 19px;
+    height: 19px;
+    background: url(../images/close-ban.png) no-repeat;
+}
+.close-ban:hover {
+    background-position: bottom;
+}
+/*topbanner部分end*/
+
+
+
+/*site-part部分开始*/
+
+
+
+
+
+/*site-part部分结束*/
+.site-part {
+    width: 100%;
+    height: 40px;
+    position: relative;
+    text-align: center;
+    margin: 0 auto;
+    /*padding: 0 128px;*/
+    background-color: #3771B9;
+}
+.site-part ul li {
+    float: left;
+
+}
+.site-part a {
+    display: block;
+    padding: 0 30px;
+    font: 400 15px/44px "microsoft yahei";
+    color: #333;
+
+}
+.site-part a:hover {
+    color: #C81623;
+}
+
+
+.shortcut-dorpdown {
+    width: 280px;
+    float: left;
+}
+
+.shortcut-dorpdown-top {
+
+    background-color: #83B8ED;
+}
+.shortcut-dorpdown-bottom {
+    height: 456px;
+    border-top: 2px solid #3771B9;
+    border-left: 1px solid #3771B9;
+    background-color: #3771B9;
+    margin: 0px;
+    padding-top: 5px;
+
+}
+.shortcut-item {
+    height: 44px;
+    color: #fff;
+    padding: 0 10px;
+}
+.shortcut-item:hover {
+    background-color: #fff;
+}
+.shortcut-item:hover a {
+    color: #C81623;
+}
+.shortcut-item h3 {
+    float: left;
+    font: 400 14px/31px "微软雅黑";
+}
+.shortcut-item h3 a {
+    color: #fff;
+}
+.shortcut-item i {
+    float: right;
+    font: 400 14px/31px consolas;
+}
+
+.shortcut-items {
+    float: right;
+    width: 910px;
+    height: 46px;
+    position: relative;
+    z-index: 10;
+}
+.shortcut-items ul li {
+    float: left;
+}
+.shortcut-items a {
+    display: block;
+    padding: 0 20px;
+    font: 400 15px/44px "microsoft yahei";
+    color: #333333;
+}
+.shortcut-items a:hover {
+    color: #C81623
+}
+/*site-nav部分开始*/
+/*site-nav部分结束*/
+
+
+
+
+
+
+/*footer部分开始*/
+.footer-end{
+    border-top: 1px solid #E5E5E5;
+    margin-top: 20px;
+    padding:  23px 0;
+    text-align: center;
+}
+.footer-aboutus a{
+    padding:  0  5px;
+}
+.copyright{
+    margin-top: 16px;
+}
+.copyright-a{
+    margin: 10px 0;
+}
+.copyright-a a{
+    margin: 0 5px;
+}
+
+
+/*footer部分结束*/
+
+
+
+/*site-nav部分开始*/
+/*site-nav部分结束*/

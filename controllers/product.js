@@ -9,7 +9,8 @@ exports.getByCategoryId = (req, res, next) => {
       return next(err)
     }
     res.render('show', {
-      products: rows
+      products: rows,
+      user: req.session.user
     })
   })
 }
@@ -21,7 +22,8 @@ exports.getById = (req, res, next) => {
       return next(err)
     }
     res.render('product', {
-      prod: rows[0]
+      prod: rows[0],
+      user: req.session.user
     })
   })
 }

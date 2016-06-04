@@ -45,4 +45,13 @@ router.get('/cart/remove', cartController.remove)
 // 添加购物车
 router.get('/cart/add', cartController.add)
 
+// 未登录跳转到登陆页面
+function checkLogin(req, res, next) {
+  let user = req.session.user
+  if (!user) {
+    return res.redirect('/login')
+  }
+  next()
+}
+
 module.exports = router

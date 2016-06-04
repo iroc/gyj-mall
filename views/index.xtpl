@@ -1,69 +1,26 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-  <meta charset="UTF-8">
-  <title>电子产品购物网站</title>
-  <link rel="stylesheet" href="/css/base.css" />
-  <link rel="stylesheet" href="/css/index.css" />
-  <link rel="shortcut icon" href="" />
-</head>
-
-<body>
-  <!--site-nav部分开始-->
-  <div class="site-nav">
-    <div class="w">
-      <div class="fr site-nav-r">
-        <ul>
-          <li>
-            {{#if (user)}} 你好：
-            <a href="#">{{user.username}}</a> &nbsp;&nbsp;
-            <a href="/logout">退出</a> {{else}}
-            <a href="/login" id="login">你好，请登录</a>&nbsp;&nbsp;&nbsp;
-            <a href="/register" class="col-red">免费注册</a> {{/if}}
-          </li>
-          <li class="line"></li>
-          <li><a href="/list">产品展示</a></li>
-          <li class="line"></li>
-          <li><a href="/cart">购物车</a></li>
-          <li class="line"></li>
-          <li><a href="order.html">我的订单</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <!--site-nav部分结束-->
-  <!--topbanner部分start-->
-  <div class="topbanner" id="topbanner">
-    <div class="w tp">
-      <a href="#">
-        <img src="images/topbanner.png">
-      </a>
-      <a href="#" class="close-ban" id="closeBan"></a>
-    </div>
-  </div>
-  <!--topbanner部分end-->
-  <!--site-part部分开始-->
-  <div class="site-part" id="site-part">
-    <div class="w clearfix">
-      <div class="shortcut-dorpdown">
-        <div class="shortcut-dorpdown-top">
-          <a href="#">
+{{extend ("./layout")}} {{#block ("head")}}
+<link rel="stylesheet" href="/css/index.css" /> {{/block}} {{#block ("body")}} {{{include ("./header")}}}
+<!--site-part部分开始-->
+<div class="site-part" id="site-part">
+  <div class="w clearfix">
+    <div class="shortcut-dorpdown">
+      <div class="shortcut-dorpdown-top">
+        <a href="#">
                             全部商品分类
                         </a>
-        </div>
-        <div class="shortcut-dorpdown-bottom">
-          {{#each (categories)}}
-          <div class="shortcut-item">
-            <h3>
+      </div>
+      <div class="shortcut-dorpdown-bottom">
+        {{#each (categories)}}
+        <div class="shortcut-item">
+          <h3>
                                 <a href="/list/cat/{{this.id}}">{{this.name}}</a>
                             </h3>
-            <i>></i>
-          </div>
-          {{/each}}
+          <i>></i>
         </div>
+        {{/each}}
       </div>
-      <div class=shortcut-items ">
+    </div>
+    <div class=shortcut-items ">
                 <ul>
                     <li><a href="index.html ">网站首页</a></li>
                     <!--<li><a href="index.html "></a></li>-->
@@ -124,104 +81,10 @@
         </div>
     </div>
     <!--today部分end-->
+{{/block}}
+{{{include ("./footer")}}}
 
-    <!--footer部分开始-->
-    <div class="footer-end ">
-        <div class="footer-top ">
-            <div class="footer-top-slgan ">
-                <span class="footer-slogan footer-slogan1 "><img src="images/slogan1.png " alt=" "/></span>
-                <span class="footer-slogan footer-slogan2 "><img src="images/slogan2.png " alt=" "/></span>
-                <span class="footer-slogan footer-slogan3 "><img src="images/slogan3.png " alt=" "/></span>
-                <span class="footer-slogan footer-slogan4 "><img src="images/slogan4.png " alt=" "/></span>
-            </div>
-            <div class="w footer-shopping clearfix ">
-                <dl>
-                    <dt><a href="# ">购物指南</a></dt>
-                    <dd><a href="# ">购物流程</a></dd>
-                    <dd><a href="# ">会员介绍</a></dd>
-                    <dd><a href="# ">生活旅行/团购</a></dd>
-                    <dd><a href="# ">常见问题</a></dd>
-                    <dd><a href="# ">大家电</a></dd>
-                    <dd><a href="# ">联系客服</a></dd>
-                </dl>
-                <dl>
-                    <dt><a href="# ">购物指南</a></dt>
-                    <dd><a href="# ">购物流程</a></dd>
-                    <dd><a href="# ">会员介绍</a></dd>
-                    <dd><a href="# ">生活旅行/团购</a></dd>
-                    <dd><a href="# ">常见问题</a></dd>
-                    <dd><a href="# ">大家电</a></dd>
-                    <dd><a href="# ">联系客服</a></dd>
-                </dl>
-                <dl>
-                    <dt><a href="# ">购物指南</a></dt>
-                    <dd><a href="# ">购物流程</a></dd>
-                    <dd><a href="# ">会员介绍</a></dd>
-                    <dd><a href="# ">生活旅行/团购</a></dd>
-                    <dd><a href="# ">常见问题</a></dd>
-                    <dd><a href="# ">大家电</a></dd>
-                    <dd><a href="# ">联系客服</a></dd>
-                </dl>
-                <dl>
-                    <dt><a href="# ">购物指南</a></dt>
-                    <dd><a href="# ">购物流程</a></dd>
-                    <dd><a href="# ">会员介绍</a></dd>
-                    <dd><a href="# ">生活旅行/团购</a></dd>
-                    <dd><a href="# ">常见问题</a></dd>
-                    <dd><a href="# ">大家电</a></dd>
-                    <dd><a href="# ">联系客服</a></dd>
-                </dl>
-                <dl class="last-dl ">
-                    <dt><a href="# ">购物指南</a></dt>
-                    <dd><a href="# ">购物流程</a></dd>
-                    <dd><a href="# ">会员介绍</a></dd>
-                    <dd><a href="# ">生活旅行/团购</a></dd>
-                    <dd><a href="# ">常见问题</a></dd>
-                    <dd><a href="# ">大家电</a></dd>
-                    <dd><a href="# ">联系客服</a></dd>
-                </dl>
-
-                <div class="footer-coverage ">
-                    <h1>
-                        爱购自营覆盖区县
-                    </h1>
-                    <div class="footer-coverage-content ">
-                        <p>爱购已向全国2378个区县提供自营配送服务，支持货到付款、POS机刷卡和售后上门服务。</p>
-                        <a href="# ">查看详情 ></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="footer-aboutus ">
-            <a href="# ">关于我们</a>|
-            <a href="# ">联系我们</a>|
-            <a href="# ">商家入驻</a>|
-            <a href="# ">营销中心</a>|
-            <a href="# ">手机爱购</a>|
-            <a href="# ">友情链接</a>|
-            <a href="# ">English Site</a>|
-            <a href="# ">Contact Us</a>
-        </div>
-        <div class="copyright ">
-            <div class="copyright-a ">
-                <a href="# "><img src="images/massage.png "></a>
-                <a href="# "><img src="images/massage2.jpg "></a>
-                <a href="# "><img src="images/massage3.png "></a>
-                <a href="# "><img src="images/massage1.png "></a>
-                <a href="# "><img src="images/massage.png "></a>
-                <a href="# "><img src="images/massage.png "></a>
-            </div>
-        </div>
-
-    </div>
-
-
-
-    <!--footer部分结束-->
-
-    <!--site-nav部分开始-->
-    <!--site-nav部分结束-->
-    <script src="/js/index.js "></script>
-    <script src="/js/lunbo.js "></script>
-    </body>
-</html>
+{{#block ("foot ")}}
+<script src="/js/index.js "></script>
+<script src="/js/lunbo.js "></script>
+{{/block}}

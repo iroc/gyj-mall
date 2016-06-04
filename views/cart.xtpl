@@ -1,0 +1,154 @@
+{{extend ("./layout")}} {{#block ("head")}}
+<link rel="stylesheet" href="/css/shortcut.css" /> {{/block}} {{#block ("body")}} {{{include ("./header")}}}
+<!--搜索部分开始-->
+<div class="site-cart-banner">
+  <div class="w">
+    <div class="banner-cart-l">
+      <a href="/">
+        <img src="images/login-banner.jpg" alt="" />
+      </a>
+      <span>购物车</span>
+    </div>
+    <div class="banner-cart-r">
+      <div class="search-input">
+        <input type="text" placeholder="手机八折" />
+        <button>搜索</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--搜索部分结束-->
+<!--购物车部分开始-->
+<div class="cart">
+  <div class="w">
+    <div class="cart-seri">
+      全部商品
+      <span class="number">1</span>
+    </div>
+    <div class="cart-main">
+      <div class="cart-main-input">
+        <input type="checkbox" class="read-commit-i" checked="checked" />全选
+      </div>
+      <div class="cart-main-l">商品</div>
+      <div class="cart-main-r">
+        <ul>
+          <li>单价（元）</li>
+          <li>数量</li>
+          <li>小计（元）</li>
+          <li>操作</li>
+        </ul>
+      </div>
+    </div>
+    <div class="cart-main-tit">
+      <input type="checkbox" class="read-commit-i" checked="checked" />
+      <span>店铺名</span>
+    </div>
+    <div id="container">
+    </div>
+  </div>
+</div>
+<!--购物车部分结束-->
+<!--footer部分开始-->
+<div class="footer-end">
+  <div class="footer-aboutus">
+    <a href="#">关于我们</a>|
+    <a href="#">联系我们</a>|
+    <a href="#">商家入驻</a>|
+    <a href="#">营销中心</a>|
+    <a href="#">手机京东</a>|
+    <a href="#">友情链接</a>|
+    <a href="#">English Site</a>|
+    <a href="#">Contact Us</a>
+  </div>
+  <div class="copyright">
+    <div class="copyright-a">
+      <a href="#"><img src="images/massage.png"></a>
+      <a href="#"><img src="images/massage2.jpg"></a>
+      <a href="#"><img src="images/massage3.png"></a>
+      <a href="#"><img src="images/massage1.png"></a>
+      <a href="#"><img src="images/massage.png"></a>
+      <a href="#"><img src="images/massage.png"></a>
+    </div>
+  </div>
+</div>
+<!--footer部分结束-->
+{{/block}} {{#block ("foot")}}
+<script type="text/template" id="template">
+  <% cartList.forEach(function(prod){ %>
+    <div class="cart-con">
+      <div class="cart-con-tit">
+        <input type="checkbox" class="read-commit-i" checked="checked" />
+        <img src="images/cart1.jpg" alt="" />
+      </div>
+      <div class="cart-con-l">
+        <a href="/product/<%= prod.id %>">
+          <%= prod.name %>
+        </a>
+      </div>
+      <div class="cart-con-r">
+        <ul>
+          <li>
+            <p class="cart_price">&yen;
+              <%= prod.price %>
+            </p>
+          </li>
+          <li>
+            <div class="f_left option_box">
+              <span>-</span>
+              <input type="tel" value="<%= prod.count %>" />
+              <span>+</span>
+            </div>
+          </li>
+          <li>
+            <%= prod.price %>
+          </li>
+          <li><a class="remove" data-cid="<%= prod.cart_id %>">删除</a></li>
+        </ul>
+      </div>
+    </div>
+    <% }) %>
+</script>
+<script src="/node_modules/underscore/underscore.js"></script>
+<script>
+loadCartList()
+
+var $container = $('#container')
+var templateStr = $('#template').html()
+
+function loadCartList() {
+  $.ajax({
+    url: '/cart/list',
+    type: 'get',
+    dataType: 'json',
+    success: function(data) {
+      var compiled = _.template(templateStr)
+      var htmlStr = compiled({
+        cartList: data
+      })
+      $container.html(htmlStr)
+    }
+  })
+}
+
+
+
+$('body').on('click', '.remove', function(e) {
+  e.preventDefault()
+  if (!confirm('您确定要将该商品从购物车中删除吗？')) {
+    return
+  }
+  var cid = $(this).data('cid')
+  $.ajax({
+    url: '/cart/remove?cid=' + cid,
+    type: 'get',
+    dataType: 'json',
+    success: function(data) {
+      var code = data.code
+      if (code === '3000') {
+        loadCartList()
+      }
+    }
+  })
+})
+</script>
+{{/block}}

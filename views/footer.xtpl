@@ -1,0 +1,69 @@
+<!--footer部分开始-->
+<div class="footer-end ">
+  <div class="footer-top ">
+    <div class="footer-top-slgan ">
+      <span class="footer-slogan footer-slogan1 "><img src="images/slogan1.png " alt=" "/></span>
+      <span class="footer-slogan footer-slogan2 "><img src="images/slogan2.png " alt=" "/></span>
+      <span class="footer-slogan footer-slogan3 "><img src="images/slogan3.png " alt=" "/></span>
+      <span class="footer-slogan footer-slogan4 "><img src="images/slogan4.png " alt=" "/></span>
+    </div>
+    <div class="w footer-shopping clearfix ">
+      <dl>
+        <dt><a href="# ">购物指南</a></dt>
+        <dd><a href="# ">购物流程</a></dd>
+        <dd><a href="# ">会员介绍</a></dd>
+        <dd><a href="# ">生活旅行/团购</a></dd>
+        <dd><a href="# ">常见问题</a></dd>
+        <dd><a href="# ">大家电</a></dd>
+        <dd><a href="# ">联系客服</a></dd>
+      </dl>
+      <dl>
+        <dt><a href="# ">购物指南</a></dt>
+        <dd><a href="# ">购物流程</a></dd>
+        <dd><a href="# ">会员介绍</a></dd>
+        <dd><a href="# ">生活旅行/团购</a></dd>
+        <dd><a href="# ">常见问题</a></dd>
+        <dd><a href="# ">大家电</a></dd>
+        <dd><a href="# ">联系客服</a></dd>
+      </dl>
+      <dl>
+        <dt><a href="# ">购物指南</a></dt>
+        <dd><a href="# ">购物流程</a></dd>
+        <dd><a href="# ">会员介绍</a></dd>
+        <dd><a href="# ">生活旅行/团购</a></dd>
+        <dd><a href="# ">常见问题</a></dd>
+        <dd><a href="# ">大家电</a></dd>
+        <dd><a href="# ">联系客服</a></dd>
+      </dl>
+      <dl>
+        <dt><a href="# ">购物指南</a></dt>
+        <dd><a href="# ">购物流程</a></dd>
+        <dd><a href="# ">会员介绍</a></dd>
+        <dd><a href="# ">生活旅行/团购</a></dd>
+        <dd><a href="# ">常见问题</a></dd>
+        <dd><a href="# ">大家电</a></dd>
+        <dd><a href="# ">联系客服</a></dd>
+      </dl>
+      <dl class="last-dl ">
+        <dt><a href="# ">购物指南</a></dt>
+        <dd><a href="# ">购物流程</a></dd>
+        <dd><a href="# ">会员介绍</a></dd>
+        <dd><a href="# ">生活旅行/团购</a></dd>
+        <dd><a href="# ">常见问题</a></dd>
+        <dd><a href="# ">大家电</a></dd>
+        <dd><a href="# ">联系客服</a></dd>
+      </dl>
+      <div class="footer-coverage ">
+        <h1>
+                        爱购自营覆盖区县
+                    </h1>
+        <div class="footer-coverage-content ">
+          <p>爱购已向全国2378个区县提供自营配送服务，支持货到付款、POS机刷卡和售后上门服务。</p>
+          <a href="# ">查看详情 ></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{{include ("./footnote")}}}
+</div>
+<!--footer部分结束-->

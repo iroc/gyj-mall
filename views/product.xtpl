@@ -1,112 +1,48 @@
-<!DOCTYPE html>
-<html>
-
-<head lang="en">
-  <meta charset="UTF-8">
-  <title></title>
-  <link rel="stylesheet" href="/css/base.css" />
-  <link rel="stylesheet" href="/css/show.css" />
-  <style>
-  .prod-container {
-    margin-top: 15px;
-    margin-bottom: 15px;
-  }
-  
-  .fullImg {
-    width: 300px;
-    vertical-align: top;
-  }
-  
-  .prodInfo {
-    display: inline-block;
-  }
-  
-  .p-title {
-    line-height: 1.5em;
-    overflow: hidden;
-    font-weight: 700;
-    font-family: arial, "microsoft yahei";
-    font-size: 16px;
-  }
-  
-  .p-price {
-    color: #e4393c;
-    font-size: 20px;
-    margin-top: 60px;
-  }
-  
-  .p-add {
-    margin-top: 130px;
-  }
-  </style>
-</head>
-
-<body>
-  <!--site-nav部分开始-->
-  <div class="site-nav">
-    <div class="w">
-      <div class="fr site-nav-r">
-        <ul>
-          <li>
-            <a href="login.html" id="login">你好，请登录</a>&nbsp;&nbsp;&nbsp;
-            <a href="register.html" class="col-red">免费注册</a>
-          </li>
-          <li class="line"></li>
-          <li><a href="show.html">产品展示</a></li>
-          <li class="line"></li>
-          <li><a href="shopcart.html">购物车</a></li>
-          <li class="line"></li>
-          <li><a href="order.html">我的订单</a></li>
-        </ul>
-      </div>
+{{extend ("./layout")}} {{#block ("head")}}
+<link rel="stylesheet" href="/css/show.css" />
+{{/block}}
+{{#block ("body")}}
+{{{include ("./header")}}}
+<!--产品展示部分开始-->
+<div class="w">
+  <div class="prod-container">
+    <img class="fullImg" src="{{prod.imagefile}}" alt="">
+    <div class="prodInfo">
+      <p class="p-title">{{prod.name}}</p>
+      <p class="p-price">
+        价格：<strong>￥{{prod.price}}</strong>
+      </p>
+      <p class="p-add">
+        <a href="/cart/add?pid={{prod.id}}">
+          <img src="/images/add.png" alt="">
+        </a>
+      </p>
     </div>
   </div>
-  <!--site-nav部分结束-->
-  <!--产品展示部分开始-->
-  <div class="w">
-    <div class="prod-container">
-      <img class="fullImg" src="{{prod.imagefile}}" alt="">
-      <div class="prodInfo">
-        <p class="p-title">{{prod.name}}</p>
-        <p class="p-price">
-          价格：<strong>￥{{prod.price}}</strong>
-        </p>
-        <p class="p-add">
-          <a href="/cart/add?pid={{prod.id}}">
-            <img src="/images/add.png" alt="">
-          </a>
-        </p>
-      </div>
+</div>
+<!--产品展示部分结束-->
+<!--footer部分开始-->
+<div class="footer-end ">
+  <div class="footer-aboutus">
+    <a href="#">关于我们</a>|
+    <a href="#">联系我们</a>|
+    <a href="#">商家入驻</a>|
+    <a href="#">营销中心</a>|
+    <a href="#">手机京东</a>|
+    <a href="#">友情链接</a>|
+    <a href="#">English Site</a>|
+    <a href="#">Contact Us</a>
+  </div>
+  <div class="copyright">
+    <div class="copyright-a">
+      <a href="#"><img src="/images/massage.png"></a>
+      <a href="#"><img src="/images/massage2.jpg"></a>
+      <a href="#"><img src="/images/massage3.png"></a>
+      <a href="#"><img src="/images/massage1.png"></a>
+      <a href="#"><img src="/images/massage.png"></a>
+      <a href="#"><img src="/images/massage.png"></a>
     </div>
   </div>
-  <!--产品展示部分结束-->
-  <!--footer部分开始-->
-  <div class="footer-end ">
-    <div class="footer-aboutus">
-      <a href="#">关于我们</a>|
-      <a href="#">联系我们</a>|
-      <a href="#">商家入驻</a>|
-      <a href="#">营销中心</a>|
-      <a href="#">手机京东</a>|
-      <a href="#">友情链接</a>|
-      <a href="#">English Site</a>|
-      <a href="#">Contact Us</a>
-    </div>
-    <div class="copyright">
-      <div class="copyright-a">
-        <a href="#"><img src="/images/massage.png"></a>
-        <a href="#"><img src="/images/massage2.jpg"></a>
-        <a href="#"><img src="/images/massage3.png"></a>
-        <a href="#"><img src="/images/massage1.png"></a>
-        <a href="#"><img src="/images/massage.png"></a>
-        <a href="#"><img src="/images/massage.png"></a>
-      </div>
-    </div>
-  </div>
-  <!--footer部分结束-->
-  <script src="/js/jquery.min.js"></script>
-  <script>
-  </script>
-</body>
-
-</html>
+</div>
+<!--footer部分结束-->
+{{/block}} {{#block ("foot")}} {{/block}}

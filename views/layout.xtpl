@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>电子产品购物网站</title>
+  <link rel="stylesheet" href="/css/base.css" />
+  <link rel="shortcut icon" href="" />
+  {{{block ("head")}}}
+</head>
+
+<body>
+  {{{block ("body")}}}
+  <script src="/js/jquery.min.js"></script>
+  {{{block ('foot')}}}
+</body>
+
+</html>

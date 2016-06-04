@@ -2,10 +2,10 @@
 
 const db = require('./db')
 
-function User(username, password, phone) {
-  this.username = username
-  this.password = password
-  this.phone = phone
+function User(user) {
+  this.username = user.username
+  this.password = user.password
+  this.phone = user.phone
 }
 
 User.prototype.save = function(callback) {

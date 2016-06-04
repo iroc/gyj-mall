@@ -1,35 +1,13 @@
-<!DOCTYPE html>
-<html>
+{{extend ("./layout")}}
 
-<head lang="en">
-  <meta charset="UTF-8">
-  <title></title>
-  <link rel="stylesheet" href="/css/base.css" />
-  <link rel="stylesheet" href="/css/show.css" />
-</head>
+{{#block ("head")}}
+<link rel="stylesheet" href="/css/show.css" />
+{{/block}}
 
-<body>
-  <!--site-nav部分开始-->
-  <div class="site-nav">
-    <div class="w">
-      <div class="fr site-nav-r">
-        <ul>
-          <li>
-            <a href="login.html" id="login">你好，请登录</a>&nbsp;&nbsp;&nbsp;
-            <a href="register.html" class="col-red">免费注册</a>
-          </li>
-          <li class="line"></li>
-          <li><a href="show.html">产品展示</a></li>
-          <li class="line"></li>
-          <li><a href="shopcart.html">购物车</a></li>
-          <li class="line"></li>
-          <li><a href="order.html">我的订单</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <!--site-nav部分结束-->
-  <!--商品展示部分开始-->
+{{#block ("body")}}
+{{{include ("./header")}}}
+
+ <!--商品展示部分开始-->
   <div class="show">
     <div class="w clearfix">
       <div class="change">
@@ -61,8 +39,9 @@
   </div>
   </div>
   <!--商品展示部分结束-->
-  <!--footer部分开始-->
-  <div class="footer-end ">
+
+<!--footer部分开始-->
+  <div class="footer-end">
     <div class="footer-aboutus">
       <a href="#">关于我们</a>|
       <a href="#">联系我们</a>|
@@ -75,17 +54,17 @@
     </div>
     <div class="copyright">
       <div class="copyright-a">
-        <a href="#"><img src="images/massage.png"></a>
-        <a href="#"><img src="images/massage2.jpg"></a>
-        <a href="#"><img src="images/massage3.png"></a>
-        <a href="#"><img src="images/massage1.png"></a>
-        <a href="#"><img src="images/massage.png"></a>
-        <a href="#"><img src="images/massage.png"></a>
+        <a href="#"><img src="/images/massage.png"></a>
+        <a href="#"><img src="/images/massage2.jpg"></a>
+        <a href="#"><img src="/images/massage3.png"></a>
+        <a href="#"><img src="/images/massage1.png"></a>
+        <a href="#"><img src="/images/massage.png"></a>
+        <a href="#"><img src="/images/massage.png"></a>
       </div>
     </div>
   </div>
   <!--footer部分结束-->
-  <script src="/js/jquery.min.js"></script>
-</body>
+{{/block}}
 
-</html>
+{{#block ("foot")}}
+{{/block}}

@@ -1,33 +1,24 @@
-<!DOCTYPE html>
-<html>
-
-<head lang="en">
-  <meta charset="UTF-8">
-  <title></title>
-  <link rel="stylesheet" href="/css/base.css" />
-  <link rel="stylesheet" href="/css/register.css" />
-</head>
-
-<body>
-  <!--注册导航栏开始-->
-  <div class="site-regi-banner">
-    <div class="w">
-      <div class="banner-regi-l">
-        <a href="#" target="_blank">
-          <img src="images/login-banner.jpg" alt="" />
-        </a>
-        <span>欢迎登录</span>
-      </div>
-      <div class="banner-regi-r">
-        <span>已有账号</span>
-        <a href="login.html">请登录</a>
-      </div>
+{{extend ("./layout")}} {{#block ("head")}}
+<link rel="stylesheet" href="/css/register.css" /> {{/block}} {{#block ("body")}}
+<!--注册导航栏开始-->
+<div class="site-regi-banner">
+  <div class="w">
+    <div class="banner-regi-l">
+      <a href="/">
+        <img src="images/login-banner.jpg" alt="" />
+      </a>
+      <span>欢迎注册</span>
+    </div>
+    <div class="banner-regi-r">
+      <span>已有账号</span>
+      <a href="/login">请登录</a>
     </div>
   </div>
-  <!--注册导航栏结束-->
-  <div class="site-regi-con">
-    <div class="w">
-      <form action="/register" id="register_form" method="post">
+</div>
+<!--注册导航栏结束-->
+<div class="site-regi-con">
+  <div class="w">
+    <form action="/register" id="register_form" method="post">
       <div class="regi-con-t">
         <div>
           <label>用户名</label>
@@ -56,62 +47,59 @@
           <a href="#">《爱购用户注册协议》</a>
         </div>
         <button class="btn" id="btn">立即注册</button>
-      </div>  
-      </form>
-      
-    </div>
-  </div>
-  <!--注册部分开始-->
-  <!--注册部分结束-->
-  <!--footer部分开始-->
-  <div class="footer-end">
-    <div class="footer-aboutus">
-      <a href="#">关于我们</a>|
-      <a href="#">联系我们</a>|
-      <a href="#">商家入驻</a>|
-      <a href="#">营销中心</a>|
-      <a href="#">手机京东</a>|
-      <a href="#">友情链接</a>|
-      <a href="#">English Site</a>|
-      <a href="#">Contact Us</a>
-    </div>
-    <div class="copyright">
-      <div class="copyright-a">
-        <a href="#"><img src="images/massage.png"></a>
-        <a href="#"><img src="images/massage2.jpg"></a>
-        <a href="#"><img src="images/massage3.png"></a>
-        <a href="#"><img src="images/massage1.png"></a>
-        <a href="#"><img src="images/massage.png"></a>
-        <a href="#"><img src="images/massage.png"></a>
       </div>
+    </form>
+  </div>
+</div>
+<!--注册部分开始-->
+<!--注册部分结束-->
+<!--footer部分开始-->
+<div class="footer-end">
+  <div class="footer-aboutus">
+    <a href="#">关于我们</a>|
+    <a href="#">联系我们</a>|
+    <a href="#">商家入驻</a>|
+    <a href="#">营销中心</a>|
+    <a href="#">手机京东</a>|
+    <a href="#">友情链接</a>|
+    <a href="#">English Site</a>|
+    <a href="#">Contact Us</a>
+  </div>
+  <div class="copyright">
+    <div class="copyright-a">
+      <a href="#"><img src="/images/massage.png"></a>
+      <a href="#"><img src="/images/massage2.jpg"></a>
+      <a href="#"><img src="/images/massage3.png"></a>
+      <a href="#"><img src="/images/massage1.png"></a>
+      <a href="#"><img src="/images/massage.png"></a>
+      <a href="#"><img src="/images/massage.png"></a>
     </div>
   </div>
-  <!--footer部分结束-->
-  <script src="/js/jquery.min.js"></script>
-  <script src="/js/register.js"></script>
-  <script>
-  $('#register_form').on('submit',function (e) {
-    e.preventDefault();
-    var url = $(this).attr('action')
-    var type = $(this).attr('method')
-    var data = $(this).serialize()
+</div>
+<!--footer部分结束-->
+{{/block}} {{#block ("foot")}}
+<script src="/js/jquery.min.js"></script>
+<script>
+$('#register_form').on('submit', function(e) {
+  e.preventDefault();
+  var url = $(this).attr('action')
+  var type = $(this).attr('method')
+  var data = $(this).serialize()
 
-    $.ajax({
-      url: url,
-      type: type,
-      data: data,
-      dataType: 'json',
-      success: function (data) {
-        var code = data.code;
-        if (code=='1000') {
-          location.href = '/';
-        }else if (code=='1001') {
-          alert('用户名已存在');
-        }
+  $.ajax({
+    url: url,
+    type: type,
+    data: data,
+    dataType: 'json',
+    success: function(data) {
+      var code = data.code;
+      if (code == '1000') {
+        location.href = '/';
+      } else if (code == '1001') {
+        alert('用户名已存在');
       }
-    });
-  });    
-  </script>
-</body>
-
-</html>
+    }
+  });
+});
+</script>
+{{/block}}

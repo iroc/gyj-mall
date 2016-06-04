@@ -1,5 +1,22 @@
 {{extend ("./layout")}} {{#block ("head")}}
-<link rel="stylesheet" href="/css/shortcut.css" /> {{/block}} {{#block ("body")}} {{{include ("./header")}}}
+<link rel="stylesheet" href="/css/shortcut.css" /> {{/block}} {{#block ("body")}}
+<style>
+.cart-add-container {
+      width: 1210px;
+    height: 50px;
+}
+.order-add {
+  background-color: #E3393B;
+  border-radius: 5px;
+  border: 1px solid #E3393B;
+  font: 400 18px/30px "microsoft yahei";
+  padding: 5px 10px;
+  color: white;
+  float: right;
+  cursor: pointer;
+}
+</style>
+{{{include ("./header")}}}
 <!--搜索部分开始-->
 <div class="site-cart-banner">
   <div class="w">
@@ -44,6 +61,9 @@
       <span>店铺名</span>
     </div>
     <div id="container">
+    </div>
+    <div class="cart-add-container">
+      <span class="order-add" id="submit_order">提交订单</span>
     </div>
   </div>
 </div>
@@ -150,5 +170,20 @@ $('body').on('click', '.remove', function(e) {
     }
   })
 })
+
+$('#submit_order').on('click',function () {
+  window.location.href = '/order/add';
+})
+
+function submitOrder() {
+  $.ajax({
+    url: '/order/add',
+    type: 'get',
+    dataType: 'json',
+    success: function (data) {
+      
+    }
+  })
+}
 </script>
 {{/block}}

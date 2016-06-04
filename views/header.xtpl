@@ -15,7 +15,7 @@
           <li class="line"></li>
           <li><a href="/cart">购物车</a></li>
           <li class="line"></li>
-          <li><a href="order.html">我的订单</a></li>
+          <li><a href="/order">我的订单</a></li>
         </ul>
       </div>
     </div>

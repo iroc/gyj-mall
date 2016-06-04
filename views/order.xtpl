@@ -1,259 +1,87 @@
-<!DOCTYPE html>
-<html>
-
-<head lang="en">
-  <meta charset="UTF-8">
-  <title></title>
-  <link rel="stylesheet" href="/css/base.css" />
-  <link rel="stylesheet" href="/css/order.css" />
-</head>
-
-<body>
-  <!--site-nav部分开始-->
-  <div class="site-nav">
-    <div class="w">
-      <div class="fr site-nav-r">
-        <ul>
-          <li>
-            <a href="#" id="login">这是用户名</a>&nbsp;&nbsp;&nbsp;
-            <a href="login.html">退出</a>
-          </li>
-          <li class="line"></li>
-          <li><a href="show.html">产品展示</a></li>
-          <li class="line"></li>
-          <li><a href="shopcart.html">购物车</a></li>
-          <li class="line"></li>
-          <li><a href="order.html">我的订单</a></li>
-        </ul>
-      </div>
+{{extend ("./layout")}} {{#block ("head")}}
+<link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+<link rel="stylesheet" href="/css/base.css" />
+<link rel="stylesheet" href="/css/order.css" /> 
+{{/block}}
+ {{#block ("body")}} 
+ {{{include ("./header")}}}
+ <div class="site-regi-banner">
+  <div class="w">
+    <div class="banner-regi-l">
+      <a href="/">
+        <img src="images/login-banner.jpg" alt="" />
+      </a>
     </div>
   </div>
-  <!--site-nav部分结束-->
-  <!--购物车部分开始-->
-  <div class="order">
-    <div class="w">
-      <div class="order-seri">
-        所有订单
-      </div>
-      <div class="order-main">
-        <div class="order-main-input">
-          <input type="checkbox" class="read-commit-i" checked="checked" />全选
-        </div>
-        <div class="order-main-l">商品</div>
-        <div class="order-main-r">
+</div>
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>订单日期</th>
+        <th>订单号</th>
+        <th>订单详情</th>
+        <th>收货人</th>
+        <th>金额</th>
+        <th>订单状态</th>
+        <th>操作</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each (orders)}}
+      <tr>
+        <td>{{this.order_date}}</td>
+        <td>{{this.order_sn}}</td>
+        <td>
           <ul>
-            <li>单价（元）</li>
-            <li>数量</li>
-            <li>小计（元）</li>
-            <li>操作</li>
+            {{#each (this.prods)}}
+            <li>{{this.name}}</li>
+            {{/each}}
           </ul>
-        </div>
-      </div>
-      <div class="order-main-tit">
-        <input type="checkbox" class="read-commit-i" checked="checked" />
-        <span>店铺名</span>
-      </div>
-      <div class="order-con">
-        <div class="order-con-tit">
-          <input type="checkbox" class="read-commit-i" checked="checked" />
-          <img src="images/cart1.jpg" alt="" />
-        </div>
-        <div class="order-con-l">
-          fgdfgdfgdfgdfgdfgdfgdfggfdfgdfgdf
-        </div>
-        <div class="order-con-r">
-          <ul>
-            <li>
-              <p class="order_price">&yen;1000.00</p>
-            </li>
-            <li>
-              <div class="f_left option_box">
-                <span>-</span>
-                <input type="tel" />
-                <span>+</span>
-              </div>
-            </li>
-            <li>29</li>
-            <li><a href="">删除</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="order-con">
-        <div class="order-con-tit">
-          <input type="checkbox" class="read-commit-i" checked="checked" />
-          <img src="images/cart1.jpg" alt="" />
-        </div>
-        <div class="order-con-l">
-          fgdfgdfgdfgdfgdfgdfgdfggfdfgdfgdf
-        </div>
-        <div class="order-con-r">
-          <ul>
-            <li>
-              <p class="order_price">&yen;1000.00</p>
-            </li>
-            <li>
-              <div class="f_left option_box">
-                <span>-</span>
-                <input type="tel" />
-                <span>+</span>
-              </div>
-            </li>
-            <li>29</li>
-            <li><a href="">删除</a></li>
-          </ul>
-        </div>
-      </div>
+        </td>
+        <td>
+          {{this.name}}
+        </td>
+        <td>
+          ￥{{this.total_price}}:00
+        </td>
+        <td>
+          等待收货
+        </td>
+        <td>
+          <a href="">确认收货</a>
+          <a href="">取消订单</a>
+        </td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>
+<!--footer部分开始-->
+<div class="footer-end">
+  <div class="footer-aboutus">
+    <a href="#">关于我们</a>|
+    <a href="#">联系我们</a>|
+    <a href="#">商家入驻</a>|
+    <a href="#">营销中心</a>|
+    <a href="#">手机京东</a>|
+    <a href="#">友情链接</a>|
+    <a href="#">English Site</a>|
+    <a href="#">Contact Us</a>
+  </div>
+  <div class="copyright">
+    <div class="copyright-a">
+      <a href="#"><img src="images/massage.png"></a>
+      <a href="#"><img src="images/massage2.jpg"></a>
+      <a href="#"><img src="images/massage3.png"></a>
+      <a href="#"><img src="images/massage1.png"></a>
+      <a href="#"><img src="images/massage.png"></a>
+      <a href="#"><img src="images/massage.png"></a>
     </div>
   </div>
-  <!--购物车部分结束-->
-  <!--footer部分开始-->
-  <div class="footer-end">
-    <div class="footer-aboutus">
-      <a href="#">关于我们</a>|
-      <a href="#">联系我们</a>|
-      <a href="#">商家入驻</a>|
-      <a href="#">营销中心</a>|
-      <a href="#">手机京东</a>|
-      <a href="#">友情链接</a>|
-      <a href="#">English Site</a>|
-      <a href="#">Contact Us</a>
-    </div>
-    <div class="copyright">
-      <div class="copyright-a">
-        <a href="#"><img src="images/massage.png"></a>
-        <a href="#"><img src="images/massage2.jpg"></a>
-        <a href="#"><img src="images/massage3.png"></a>
-        <a href="#"><img src="images/massage1.png"></a>
-        <a href="#"><img src="images/massage.png"></a>
-        <a href="#"><img src="images/massage.png"></a>
-      </div>
-    </div>
-  </div>
-  <script src="/js/jquery.min.js"></script>
-  <!--footer部分结束-->
-  <script>
-  // 点击提交表单
-  $('.submit').on('click', function() {
-    var _this = $(this);
+</div>
 
-    //
-    if (_this.hasClass('disabled')) {
-      return;
-    }
+{{/block}}
 
-    // 追加了一个禁用的类
-    _this.addClass('disabled');
-
-    // 将表单数据序列化处理key=val&key=val
-    var formData = $('#ajaxForm').serialize();
-    console.log(formData);
-    $.ajax({
-      url: 'register.php',
-      type: 'post',
-      data: formData,
-      beforeSend: function() {
-        // ajax请求前调用，常用来做验证处理
-        var name = $('.name').val();
-
-        if (name == '') {
-          $('.tips p')
-            .text('用户名不能为空')
-            .fadeIn(500)
-            .delay(1500)
-            .fadeOut(500);
-
-          // 终止请求发出
-          return false;
-        }
-
-        // 忽略了其它的验证，自行完成
-
-        // 验证通过了后处理
-        _this.val('正在提交...');
-
-      },
-      success: function(data) {
-        console.log(data);
-      },
-      error: function() {
-        //
-      },
-      complete: function() {
-        // ajax请求完成的时候调用
-        _this.val('立即注册');
-        _this.removeClass('disabled');
-      }
-    });
-  });
-
-  // 发送验证码
-  $('.verify').on('click', function() {
-    var _this = $(this);
-
-    if (_this.hasClass('disabled')) {
-      return;
-    }
-
-    var mobile = $('.mobile').val();
-
-    $.ajax({
-      url: 'getCode.php',
-      type: 'post',
-      data: {
-        mobile: mobile
-      },
-      beforeSend: function() {
-        var regMobile = /1\d{10}/;
-
-        // 验证
-        if (!regMobile.test(mobile)) {
-          $('.tips p')
-            .text('手机号码不正码')
-            .fadeIn(500)
-            .delay(1500)
-            .fadeOut(500);
-
-          // 终止请求
-          return false;
-        }
-
-        var seconds = 10;
-
-        _this.addClass('disabled');
-
-        var t = setInterval(function() {
-          if (seconds <= 1) {
-            clearInterval(t);
-            _this.removeClass('disabled');
-
-            _this.val('获取验证码');
-            return;
-          }
-          _this.val(--seconds + '秒后再次获取');
-
-
-        }, 500);
-      },
-      success: function(data) {
-        alert('验证码已发送，请查收');
-      },
-      error: function() {},
-      complete: function() {}
-    });
-  });
-
-  // 快捷方式
-  $('input').click(function() {});
-
-  // 可以详细配置
-  $('input').on('click', function() {});
-
-
-
-  // $.post({url: ''});
-
-  // $.get({url: ''});
-
-  $.ajax({
-    type: 'get'
-  }) < /body> < /html>
+{{#block ("foot")}}
+{{/block}}

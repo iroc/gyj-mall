@@ -3,6 +3,7 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const session = require('express-session')
+const cookieParser = require('cookie-parser')
 const router = require('./router')
 const config = require('./config')
 
@@ -15,6 +16,9 @@ app.use('/node_modules', express.static('node_modules'))
 // 配置解析post请求体
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
+
+// 配置解析 cookie 的中间件
+app.use(cookieParser())
 
 // 配置 session（保存状态）
 app.use(session({

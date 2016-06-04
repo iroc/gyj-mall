@@ -39,3 +39,22 @@ CREATE TABLE carts(
     product_id INT NOT NULL,
     count INT NOT NULL
 );
+
+-- 订单表
+CREATE TABLE orders(
+    id INT PRIMARY KEY auto_increment,
+    user_id INT NOT NULL,
+    order_sn VARCHAR(50) UNIQUE NOT NULL,
+    name VARCHAR(20) NOT NULL,
+    address VARCHAR(50) NOT NULL,
+    mobile VARCHAR(20),
+    total_price DECIMAL
+);
+
+-- 订单详情表
+CREATE TABLE order_details(
+    id INT PRIMARY KEY auto_increment,
+    order_id INT NOT NULL,
+    product_id INT NOT NULL,
+    count INT NOT NULL
+);

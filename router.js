@@ -7,6 +7,7 @@ const indexController = require('./controllers/index')
 const userController = require('./controllers/user')
 const productController = require('./controllers/product')
 const cartController = require('./controllers/cart')
+const orderController = require('./controllers/order')
 
 // 展示首页
 router.get('/', indexController.showIndex)
@@ -44,6 +45,12 @@ router.get('/cart/remove', cartController.remove)
 
 // 添加购物车
 router.get('/cart/add', cartController.add)
+
+// 获取订单页面
+router.get('/order', checkLogin, orderController.showIndex)
+
+// 添加订单
+router.get('/order/add', checkLogin, orderController.add)
 
 // 未登录跳转到登陆页面
 function checkLogin(req, res, next) {

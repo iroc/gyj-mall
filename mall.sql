@@ -45,6 +45,7 @@ CREATE TABLE orders(
     id INT PRIMARY KEY auto_increment,
     user_id INT NOT NULL,
     order_sn VARCHAR(50) UNIQUE NOT NULL,
+    order_date DATETIME NOT NULL,
     name VARCHAR(20) NOT NULL,
     address VARCHAR(50) NOT NULL,
     mobile VARCHAR(20),

@@ -8,9 +8,11 @@ const async = require('async')
 
 exports.showIndex = (req, res, next) => {
   // 查询所有订单
-  let sql = 'SELECT * FROM orders'
+  let sql = 'SELECT * FROM orders WHERE user_id=?'
 
-  db.query(sql, (err, rows) => {
+  let user = req.session.user
+
+  db.query(sql, [ user.id ],(err, rows) => {
     if (err) {
       return next(err)
     }
@@ -37,7 +39,7 @@ exports.showIndex = (req, res, next) => {
       })
       res.render('order', {
         orders: rows,
-        user: req.session.user
+        user: user
       })
     })
   })

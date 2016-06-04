@@ -35,7 +35,7 @@ exports.add = (req, res, next) => {
 
   // 如果用户已登录，则是在线购物车
   if (req.session.user) {
-    return onlineCart()
+    onlineCart(req,res)
   }else {
     res.redirect('/login')
   }
